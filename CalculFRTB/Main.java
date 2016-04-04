@@ -40,9 +40,10 @@ public class Main {
 		
 		market.ComputeCapitalStandAlone();
 		
+		market.LogCapitalStandAlone();
+		
 
 		System.out.print("End !!! "); 
-		
 		
 	}
 

@@ -6,7 +6,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import containers.GlobalRisk;
+
 import containers.RiskFactory;
 import containers.RiskMap;
 
@@ -43,9 +43,16 @@ public final class Market {
 	public boolean ComputeCapitalStandAlone(){
 		
 		riskfactors.ComputeStandAlone();
-		GlobalRisk globalrisk = factory.GetGlobalRisk();
+		factory.GetGlobalRisk();
 		
 		return true;
 	}
 
+	public boolean LogCapitalStandAlone(){
+		
+		riskfactors.LogCapitalStandAlone(myLog);
+		
+		return true;
+	}
+	
 }
